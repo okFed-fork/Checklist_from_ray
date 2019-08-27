@@ -48,6 +48,9 @@
                                         <constraint firstAttribute="bottomMargin" secondItem="MSh-ko-IzE" secondAttribute="bottom" constant="1" id="pZT-Jf-sfb"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="fe3-Jy-YbM" kind="show" identifier="EditItemSegue" trigger="accessoryAction" id="r8t-4I-Nrr"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -115,7 +118,7 @@
                                 <action selector="cancel:" destination="fe3-Jy-YbM" id="cUZ-H4-Y76"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" enabled="NO" title="Add" id="YT2-Ea-JsS">
+                        <barButtonItem key="rightBarButtonItem" enabled="NO" title="Done" id="YT2-Ea-JsS">
                             <connections>
                                 <action selector="done:" destination="fe3-Jy-YbM" id="7aM-2f-Pkc"/>
                             </connections>
@@ -150,4 +153,7 @@
             <point key="canvasLocation" x="128.80000000000001" y="39.130434782608695"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="r8t-4I-Nrr"/>
+    </inferredMetricsTieBreakers>
 </document>
