@@ -32,8 +32,13 @@ class ChecklistViewController: UITableViewController {
     super.viewDidLoad()
     
     navigationController?.navigationBar.prefersLargeTitles = true
-    
+    navigationItem.leftBarButtonItem = editButtonItem
   }
+    
+    override func setEditing(_ editing: Bool, animated: Bool) {
+        super.setEditing(editing, animated: true)
+        tableView.setEditing(tableView.isEditing, animated: true)
+    }
   
   override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     return todoList.todos.count
