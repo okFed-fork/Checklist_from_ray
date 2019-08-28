@@ -60,15 +60,24 @@
                             <outlet property="delegate" destination="ewa-4u-uF2" id="VWV-53-v5r"/>
                         </connections>
                     </tableView>
+                    <toolbarItems/>
                     <navigationItem key="navigationItem" title="Checklists" id="J02-ki-eaU">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="YkR-0o-uiK">
-                            <connections>
-                                <action selector="addItem:" destination="ewa-4u-uF2" id="JOG-Vx-azq"/>
-                                <segue destination="fe3-Jy-YbM" kind="show" identifier="AddItemSegue" id="Kvv-mz-wJD"/>
-                            </connections>
-                        </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem systemItem="add" id="YkR-0o-uiK">
+                                <connections>
+                                    <action selector="addItem:" destination="ewa-4u-uF2" id="JOG-Vx-azq"/>
+                                    <segue destination="fe3-Jy-YbM" kind="show" identifier="AddItemSegue" id="Kvv-mz-wJD"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="Delete" id="EPJ-Vx-c87">
+                                <connections>
+                                    <action selector="deleteItems:" destination="ewa-4u-uF2" id="gnd-Wx-371"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vcu-wd-dG8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -114,6 +123,7 @@
                             <outlet property="delegate" destination="fe3-Jy-YbM" id="7dN-vN-hqz"/>
                         </connections>
                     </tableView>
+                    <toolbarItems/>
                     <navigationItem key="navigationItem" title="Title" id="l5y-cJ-S8c">
                         <barButtonItem key="leftBarButtonItem" title="Cancel" id="hAk-yS-oED">
                             <connections>
@@ -126,6 +136,7 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="addBarButton" destination="YT2-Ea-JsS" id="fzZ-15-Vkt"/>
                         <outlet property="cancelBarButton" destination="hAk-yS-oED" id="Ig0-iE-Yz6"/>
