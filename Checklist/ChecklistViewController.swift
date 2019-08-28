@@ -68,6 +68,10 @@ class ChecklistViewController: UITableViewController {
     tableView.deleteRows(at: indexPaths, with: .automatic)
   }
     
+    override func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
+        todoList.move(item: todoList.todos[sourceIndexPath.row], to: destinationIndexPath.row)
+        tableView.reloadData()
+    }
   
   
   func configureText(for cell: UITableViewCell, with item: ChecklistItem) {
